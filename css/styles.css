@@ -1,5 +1,10 @@
+@font-face {
+    font-family: 'Aonic-Medium';
+    src: url("/fonts/Aonic-Medium.ttf") format("truetype");
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Aonic-Medium', Arial, sans-serif;
     background-color: #000;
     color: #fff;
 }
