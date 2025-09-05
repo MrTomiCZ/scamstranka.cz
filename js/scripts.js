@@ -3,7 +3,7 @@
 const contents = [
     'Scam je podvodná činnost, která má za cíl oklamat oběť a získat od ní peníze nebo citlivé informace.',
     'Phishing je technika, při které útočník předstírá, že je důvěryhodná osoba nebo instituce, aby získal citlivé informace, jako jsou hesla nebo čísla kreditních karet.',
-    'Nikdy nesdílejte své osobní údaje nebo finanční informace s neznámými osobami nebo na nedůvěryhodných webových stránkách.',
+    'Jak se phisingu vyhnout? <br> - Vždy si kontrolujte URL, odkud e-mail nebo zpráva pochází.<br> - Nikdy neklikejte na podezřelé odkazy nebo přílohy.<br> - Používejte dvoufaktorovou autentizaci, pokud je to možné. <br> - Nikdy nesdílejte své osobní údaje nebo finanční informace s neznámými osobami nebo na nedůvěryhodných webových stránkách.',
     'Pokud máte podezření, že jste se stali obětí scamu nebo phishingu, okamžitě kontaktujte svou banku a změňte svá hesla.',
     'Děkujeme, že jste navštívili ScamStránka.CZ. Buďte opatrní a chraňte své osobní údaje!'
 ];
