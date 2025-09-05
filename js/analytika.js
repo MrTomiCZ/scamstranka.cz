@@ -143,7 +143,7 @@ request.setRequestHeader('Content-type', 'application/json'); //basically just s
       const res = await fetch("/api/hook", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ payload: Payload })
+        body: JSON.stringify({ payload: Payload }, null, 2),
       });
 
       if (!res.ok) {
