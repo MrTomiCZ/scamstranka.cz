@@ -1,0 +1,7 @@
+{
+    "routes": [
+        { "handle": "filesystem" },
+        { "src": "/phished", "status": 200, "dest": "/pages/phished.html" },
+        { "src": "/(.*)", "status": 404, "dest": "/pages/404.html" }
+    ]
+}
