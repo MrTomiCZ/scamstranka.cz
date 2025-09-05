@@ -38,14 +38,15 @@ function contact() {
                 email: form.email.value,
                 message: form.message.value
             }),
+            headers: { "Content-Type": "application/json" }
         }).then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
             return response.json();
         }).then(data => {
-            if (data.error) alert('CHYBA: ' + data.error + "Detaily: \n" + data.details);
-            alert(data.msg);
+            if (data.error) return alert('CHYBA: ' + data.error + "\nDetaily: \n" + data.details || 'Žádné detaily');
+            alert(data.message || 'Něco je hodně špatně, použijte prosím e-mail.');
         }).catch((error) => {
             alert('CHYBA:' + error);
         });

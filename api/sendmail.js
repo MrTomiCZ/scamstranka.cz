@@ -36,7 +36,3 @@ export default async function handler(req, res) {
         res.status(200).json({ error: '500 Nelze odeslat email', details: error.message });
     }
 }
-
-/*
-Also, set environment variables SEZNAM_USER and SEZNAM_PASS in your Vercel project settings.
-*/
