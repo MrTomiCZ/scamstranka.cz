@@ -16,3 +16,13 @@ a {
     color: #1E90FF;
     text-decoration: none;
 }
+
+.next {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #1E90FF;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
