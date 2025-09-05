@@ -1,7 +1,6 @@
 // POKUD SE ZDE VRTÁTE V KÓDU, POZOR MŮŽETE DOSTAT BOLEST HLAVY
 
 const contents = [
-    'Tato stránka slouží k vysvětlení pojmů jako scam, phishing, a podobně. Cílem je informovat uživatele o rizicích spojených s těmito praktikami a jak se jim vyhnout.',
     'Scam je podvodná činnost, která má za cíl oklamat oběť a získat od ní peníze nebo citlivé informace.',
     'Phishing je technika, při které útočník předstírá, že je důvěryhodná osoba nebo instituce, aby získal citlivé informace, jako jsou hesla nebo čísla kreditních karet.',
     'Nikdy nesdílejte své osobní údaje nebo finanční informace s neznámými osobami nebo na nedůvěryhodných webových stránkách.',
