@@ -1,6 +1,8 @@
 export default async function handler(req, res) {
   const { payload } = req.body;
 
+  console.log(payload); // what the fuck are you doing handler
+
   const discordRes = await fetch(process.env.DISCORD_WEBHOOK, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
