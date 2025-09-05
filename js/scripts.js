@@ -14,6 +14,12 @@ function nextPage() {
     if (contents.length === 0) {
         document.querySelector('.next').innerHTML = '<i class="hgi hgi-stroke hgi-contact-01"></i> Kontakt';
         document.querySelector('.next').setAttribute('href', 'javascript:contact()');
+        const restart = document.createElement('a');
+        restart.className = 'next';
+        restart.style.marginLeft = '10px';
+        restart.innerHTML = '<i class="hgi hgi-stroke hgi-reload-01"></i> Projít si to znovu';
+        restart.setAttribute('href', 'javascript:location.reload()');
+        document.body.appendChild(restart);
     }
 }
 
