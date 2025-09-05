@@ -25,7 +25,7 @@ a {
     background-color: #1E90FF;
     color: #fff;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    transition: all 0.3s;
 }
 
 .next:hover {
@@ -33,5 +33,5 @@ a {
     color: #fff;
     border-radius: 5px;
     transform: scale(1.25);
-    transition: background-color 0.3s;
+    transition: all 0.3s;
 }
