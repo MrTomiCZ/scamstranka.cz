@@ -27,7 +27,7 @@ export default async function handler(req, res) {
     try {
         await transporter.sendMail({
             from: "SCAMSTRANKA MAILER <"+process.env.SEZNAM_USER+">",
-            to: 'mrtomicz@frdomains.eu',
+            to: 'mrtomicz@frdomains.eu; kontakt@scamstranka.cz',
             subject: "[KONTAKT FORM] Nová zpráva > " + name,
             html: "Jméno: <strong>" + name + "</strong><br>Email: <strong>" + email + "</strong><br>Zpráva: <strong>" + message + "</strong>"
         });
