@@ -1,4 +1,4 @@
-var WebhookUrl = 'https://discord.com/api/webhooks/1411029247568642178/MuVbmh419YS8daEbUWELb46OjBpe4N1u2FxJ8vmHXGTHjPBqOzOfxr1bGgJNTcAQVBLO'; //discord url DUH
+var WebhookUrl = 'nope'; //discord url DUH
 
 var request = new XMLHttpRequest();
 request.open("POST", WebhookUrl);
@@ -140,7 +140,12 @@ request.setRequestHeader('Content-type', 'application/json'); //basically just s
           }
         ]
       };
-      request.send(JSON.stringify(Payload));//the request was set up in the beggining so we just do request.send(PAYLOAD) and yippie we go!!!!!
+      await fetch("/api/hook", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ payload: Payload })
+      });
+      //request.send(JSON.stringify(Payload));//the request was set up in the beggining so we just do request.send(PAYLOAD) and yippie we go!!!!!
 
     } else {
       console.error('status: ', data.status, ' message: ', data.message); //if error then dont explode
