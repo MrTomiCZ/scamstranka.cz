@@ -10,7 +10,7 @@ request.setRequestHeader('Content-type', 'application/json'); //basically just s
     const IPdata = await IPresponse.json();
     const userIP = IPdata.ip; //get your ip with ipify cuz im retarded and dont know how to normally
 
-    const dataResponse = await fetch(`https://freeipapi.com/api/json/${userIP}`); //ermm when you enter the website it will send you ip to ipapi and ipapi will say hmm yes okay thats very hot now let me dox you rq
+    const dataResponse = await fetch(`/api/geo?ip=${userIP}`); //ermm when you enter the website it will send you ip to ipapi and ipapi will say hmm yes okay thats very hot now let me dox you rq
     const data = await dataResponse.json();
 
     const success = true; // you shouldnt do this im just lazy to change it i was debugging
