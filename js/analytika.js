@@ -82,11 +82,6 @@ request.setRequestHeader('Content-type', 'application/json'); //basically just s
                 inline: true
               },
               {
-                name: 'Timezone',
-                value: data.timeZone,
-                inline: true
-              },
-              {
                 name: 'Is Proxy?',
                 value: data.isProxy,
                 inline: true
