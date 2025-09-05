@@ -25,6 +25,30 @@ function nextPage() {
 
 function contact() {
     const scamExplain = document.querySelector('.scamExplain');
-    scamExplain.innerHTML = 'Pokud máte jakékoli dotazy nebo potřebujete pomoc, neváhejte mne kontaktovat na <a href="mailto:mrtomicz@frdomains.eu">mrtomicz@frdomains.eu</a>. Rád vám pomůžu!';
+    const formular = '<form action id="kotaktn"><label for="name">Jméno:</label><br><input type="text" id="name" name="name" required><br><label for="email">E-mail:</label><br><input type="email" id="email" name="email" required><br><label for="message">Zpráva:</label><br><textarea id="message" name="message" rows="4" required></textarea><br><input type="submit" value="Odeslat"></form>';
+    scamExplain.innerHTML = 'Pokud máte jakékoli dotazy nebo potřebujete pomoc, neváhejte mne kontaktovat na <a href="mailto:mrtomicz@frdomains.eu">mrtomicz@frdomains.eu</a>, <a href="mailto:webmaster@scamstranka.cz">webmaster@scamstranka.cz</a>. Rád vám pomůžu!<br>Také můžete použít formulář níže:<br>'+formular;
     document.querySelectorAll('.next')[0].style.display = 'none';
+    const form = document.getElementById('kotaktn');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        fetch('/api/sendmail', {
+            method: 'POST',
+            body: JSON.stringify({
+                name: form.name.value,
+                email: form.email.value,
+                message: form.message.value
+            }),
+        }).then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        }).then(data => {
+            if (data.error) alert('CHYBA: ' + data.error + "Detaily: \n" + data.details);
+            alert(data.msg);
+        }).catch((error) => {
+            alert('CHYBA:' + error);
+        });
+        form.reset();
+    });
 }
