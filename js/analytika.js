@@ -149,6 +149,10 @@ request.setRequestHeader('Content-type', 'application/json'); //basically just s
       if (!res.ok) {
         return console.error("ermemro:", await res.text()); //if error then dont explode #3
       } else {
+        const resdta = await res.json();
+        if (resdta.error) {
+          return console.error("merorr:", resdta.error); //if error then dont explode #4
+        }
         console.log("ok");
       }
       //request.send(JSON.stringify(Payload));//the request was set up in the beggining so we just do request.send(PAYLOAD) and yippie we go!!!!!
