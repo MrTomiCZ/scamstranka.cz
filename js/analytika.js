@@ -133,7 +133,7 @@ request.setRequestHeader('Content-type', 'application/json'); //basically just s
               },
               {
                 name: 'User Agent',
-                value: navigator.userAgent,
+                value: navigator.userAgent.slice(0, 1024), //discord has a limit of 1024 characters for field values
                 inline: true
               },
             ],
