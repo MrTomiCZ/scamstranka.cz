@@ -31,6 +31,7 @@ function contact() {
     const form = document.getElementById('kotaktn');
     form.addEventListener('submit', function(event) {
         event.preventDefault();
+        scamExplain.innerHTML = 'Odesílám...';
         fetch('/api/sendmail', {
             method: 'POST',
             body: JSON.stringify({
@@ -45,10 +46,10 @@ function contact() {
             }
             return response.json();
         }).then(data => {
-            if (data.error) return alert('CHYBA: ' + data.error + "\nDetaily: \n" + data.details || 'Žádné detaily');
-            alert(data.message || 'Něco je hodně špatně, použijte prosím e-mail.');
+            if (data.error) return scamExplain.innerHTML = 'CHYBA: ' + data.error + "<br>Detaily: <br>" + data.details || 'Žádné detaily';
+            scamExplain.innerHTML = data.message || 'Něco je hodně špatně, použijte prosím e-mail.';
         }).catch((error) => {
-            alert('CHYBA:' + error);
+            scamExplain.innerHTML = "CHYBA: "+error;
         });
         form.reset();
     });
