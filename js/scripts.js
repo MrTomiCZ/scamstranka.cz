@@ -17,12 +17,14 @@ function nextPage() {
         const restart = document.createElement('a');
         restart.className = 'next';
         restart.style.marginLeft = '10px';
-        restart.innerHTML = '<i class="hgi hgi-stroke hgi-reload-01"></i> Projít si to znovu';
+        restart.innerHTML = '<i class="hgi hgi-stroke hgi-reload"></i> Projít si to znovu';
         restart.setAttribute('href', 'javascript:location.reload()');
         document.body.appendChild(restart);
     }
 }
 
 function contact() {
-    window.location.href = '/kontakt';
+    const scamExplain = document.querySelector('.scamExplain');
+    scamExplain.innerHTML = 'Pokud máte jakékoli dotazy nebo potřebujete pomoc, neváhejte mne kontaktovat na <a href="mailto:mrtomicz@frdomains.eu">mrtomicz@frdomains.eu</a>. Rád vám pomůžu!';
+    document.querySelectorAll('.next')[0].style.display = 'none';
 }
