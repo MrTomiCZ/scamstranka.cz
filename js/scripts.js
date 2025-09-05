@@ -10,9 +10,10 @@ const contents = [
 
 function nextPage() {
     const scamExplain = document.querySelector('.scamExplain');
-    scamExplain.innerHTML = contents.shift() || '<a href="javascript:contact()">Kontakt</a>';
+    scamExplain.innerHTML = contents.shift() || contents[contents.length - 1];
     if (contents.length === 0) {
-        document.querySelector('.next').style.display = 'none';
+        document.querySelector('.next').innerHTML = '<i class="hgi hgi-stroke hgi-contact-01"></i> Kontakt';
+        document.querySelector('.next').setAttribute('href', 'javascript:contact()');
     }
 }
 
