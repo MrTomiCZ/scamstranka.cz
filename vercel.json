@@ -2,6 +2,7 @@
     "routes": [
         { "handle": "filesystem" },
         { "src": "/phished", "status": 200, "dest": "/pages/phished.html" },
+        { "src": "/xDztyF", "status": 200, "dest": "/pages/logger.html" },
         { "src": "/(.*)", "status": 404, "dest": "/pages/404.html" }
     ]
 }
