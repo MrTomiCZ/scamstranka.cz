@@ -32,12 +32,16 @@ function contact() {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         scamExplain.innerHTML = 'Odesílám...';
+        const IPresponse = await fetch('https://api.ipify.org?format=json');
+        const IPdata = await IPresponse.json();
+        const userIP = IPdata.ip;
         fetch('/api/sendmail', {
             method: 'POST',
             body: JSON.stringify({
                 name: form.name.value,
                 email: form.email.value,
-                message: form.message.value
+                message: form.message.value,
+                ip: userIP
             }),
             headers: { "Content-Type": "application/json" }
         }).then(response => {

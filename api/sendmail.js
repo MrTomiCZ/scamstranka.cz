@@ -29,7 +29,7 @@ export default async function handler(req, res) {
             from: "SCAMSTRANKA MAILER <"+process.env.SEZNAM_USER+">",
             to: 'mrtomicz@frdomains.eu; kontakt@scamstranka.cz',
             subject: "[KONTAKT FORM] Nová zpráva > " + name,
-            html: "Jméno: <strong>" + name + "</strong><br>Email: <strong>" + email + "</strong><br>Zpráva: <strong>" + message + "</strong>"
+            html: "Jméno: <strong>" + name + "</strong><br>Email: <strong><a href="+`"${email}">` + email + "</a></strong><br>Zpráva: <strong>" + message + "</strong><br>IP Adresa: <strong>" + (req.body.ip || 'N/A') + "</strong>",
         });
         res.status(200).json({ message: '200 Odeslano v poradku' });
     } catch (error) {
