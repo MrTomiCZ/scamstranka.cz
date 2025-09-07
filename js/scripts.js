@@ -23,13 +23,13 @@ function nextPage() {
     }
 }
 
-async function contact() {
+function contact() {
     const scamExplain = document.querySelector('.scamExplain');
     document.querySelectorAll('.next')[0].style.display = 'none';
     const formular = '<form action id="kotaktn"><label for="name">Jméno:</label><br><input type="text" id="name" name="name" required><br><label for="email">E-mail:</label><br><input type="email" id="email" name="email" required><br><label for="message">Zpráva:</label><br><textarea id="message" name="message" rows="4" required></textarea><br><input type="submit" value="Odeslat" class="next"></form>';
     scamExplain.innerHTML = 'Pokud máte jakékoli dotazy nebo potřebujete pomoc, neváhejte mne kontaktovat na <a href="mailto:mrtomicz@frdomains.eu">mrtomicz@frdomains.eu</a>, <a href="mailto:webmaster@scamstranka.cz">webmaster@scamstranka.cz</a>. Rád vám pomůžu!<br>Také můžete použít formulář níže:<br>'+formular;
     const form = document.getElementById('kotaktn');
-    form.addEventListener('submit', function(event) {
+    form.addEventListener('submit', async function(event) {
         event.preventDefault();
         scamExplain.innerHTML = 'Odesílám...';
         const IPresponse = await fetch('https://api.ipify.org?format=json');
