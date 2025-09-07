@@ -23,7 +23,7 @@ function nextPage() {
     }
 }
 
-function contact() {
+async function contact() {
     const scamExplain = document.querySelector('.scamExplain');
     document.querySelectorAll('.next')[0].style.display = 'none';
     const formular = '<form action id="kotaktn"><label for="name">Jméno:</label><br><input type="text" id="name" name="name" required><br><label for="email">E-mail:</label><br><input type="email" id="email" name="email" required><br><label for="message">Zpráva:</label><br><textarea id="message" name="message" rows="4" required></textarea><br><input type="submit" value="Odeslat" class="next"></form>';
