@@ -27,7 +27,11 @@ async function reloadLang(lang, element) {
         const value = valueParts.join('=').trim();//kdyby byly mezerniky navic jdou pryc
         if (element) {
             element.querySelectorAll(`[langId="${key.trim()}"]`).forEach(el => {//tady se to ulozi / ukaze / renderne
-                el.innerHTML = value;
+                if (typeof el.value !== "undefined") {
+                    el.value = value;
+                } else {
+                    el.innerHTML = value;
+                }
             });
         } else {
             document.querySelectorAll(`[langId="${key.trim()}"]`).forEach(el => {//tady se to ulozi / ukaze / renderne
