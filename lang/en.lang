@@ -5,7 +5,7 @@
 
 nextPage=-&gt; Next
 ##scamExplain=This explanation does not work yet. We are working on it!
-contact=If you have any questions or need help, don't hesitate to contact me @ <a href="mailto:mrtomicz@frdomains.eu">mrtomicz@frdomains.eu</a>, or <a href="mailto:webmaster@scamstranka.cz">webmaster@scamstranka.cz</a>. I'd love to help you!<br>You can also use the form below:<br>
+contact=If you have any questions or need help, don't hesitate to contact me @ <a href="mailto:mrtomicz@frdomains.eu">mrtomicz@frdomains.eu</a>, or <a href="mailto:webmaster@scamstranka.cz">webmaster@scamstranka.cz</a>. I'd love to help you!<br>You can also use the form below:<br>{{FORM}}
 formName=Name:
 formEmail=E-Mail:
 formMsg=Message:

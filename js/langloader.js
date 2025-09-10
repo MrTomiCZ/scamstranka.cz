@@ -16,7 +16,7 @@ if (userlang.startsWith('cs')) {//cestina🇨🇿🇨🇿🇨🇿🇨🇿🇨�
 //tady se to loadne z /lang/xx.lang
 //a pak se to aplikuje na vsechny elementy s langId="id"
 //UPRAVENO::: tady se jen definuje funkce
-async function reloadLang(lang) {
+async function reloadLang(lang, element) {
     if (!loadLang) return; //tady serem na to pokud nechcem nacitat
     const langraw = await fetch(`/lang/${lang}.lang`)//nacti jazyk
     const langtext = await langraw.text();//precti ho
@@ -25,9 +25,15 @@ async function reloadLang(lang) {
         if (line.startsWith('##') || line.trim() === '') continue;//komentar
         const [key, ...valueParts] = line.split('=');//tu uz se  nacitaji
         const value = valueParts.join('=').trim();//kdyby byly mezerniky navic jdou pryc
-        document.querySelectorAll(`[langId="${key.trim()}"]`).forEach(el => {//tady se to ulozi / ukaze / renderne
-            el.innerHTML = value;
-        });
+        if (element) {
+            element.querySelectorAll(`[langId="${key.trim()}"]`).forEach(el => {//tady se to ulozi / ukaze / renderne
+                el.innerHTML = value;
+            });
+        } else {
+            document.querySelectorAll(`[langId="${key.trim()}"]`).forEach(el => {//tady se to ulozi / ukaze / renderne
+                el.innerHTML = value;
+            });
+        }
     }
 };
 
