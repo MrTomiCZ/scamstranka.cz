@@ -22,7 +22,9 @@ function nextPage() {
         restart.style.marginLeft = '10px'; //margin
         restart.innerHTML = '<i class="hgi hgi-stroke hgi-reload"></i> Projít si to znovu'; //text
         restart.setAttribute('href', 'javascript:location.reload()');//aby se to proslo zpatky
+        restart.setAttribute('langId', 'restartBtn')
         document.body.appendChild(restart);//pridani do body
+        loadLang(lang);
     }
 }
 
@@ -34,7 +36,10 @@ function contact() {
     //strasne shit zpusob elementu V
     const formular = '<form action id="kotaktn"><label for="name" langId="formName">Jméno:</label><br><input type="text" id="name" name="name" required><br><label for="email" langId="formEmail">E-mail:</label><br><input type="email" id="email" name="email" required><br><label for="message" langId="formMsg">Zpráva:</label><br><textarea id="message" name="message" rows="4" required></textarea><br><input type="submit" value="Odeslat" class="next" langId="formSend"></form>';
     //tady se dava text kontaktu
-    scamExplain.innerHTML = 'Pokud máte jakékoli dotazy nebo potřebujete pomoc, neváhejte mne kontaktovat na <a href="mailto:mrtomicz@frdomains.eu">mrtomicz@frdomains.eu</a>, <a href="mailto:webmaster@scamstranka.cz">webmaster@scamstranka.cz</a>. Rád vám pomůžu!<br>Také můžete použít formulář níže:<br>'+formular;
+    scamExplain.innerHTML = 'Pokud máte jakékoli dotazy nebo potřebujete pomoc, neváhejte mne kontaktovat na <a href="mailto:mrtomicz@frdomains.eu">mrtomicz@frdomains.eu</a>, <a href="mailto:webmaster@scamstranka.cz">webmaster@scamstranka.cz</a>. Rád vám pomůžu!<br>Také můžete použít formulář níže:<br>';
+    scamExplain.setAttribute('langId', 'contact')
+    loadLang(lang);
+    scamExplain.innerHTML += formular;
     const form = document.getElementById('kotaktn'); //getnuti formulare
     form.addEventListener('submit', async function(event) {//toto je kdyz das odeslat
         event.preventDefault();//vyser se na normalni odeslani a pouzij tohle
