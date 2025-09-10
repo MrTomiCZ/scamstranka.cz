@@ -32,5 +32,5 @@ async function reloadLang(lang) {
 };
 
 (async () => {
-    reloadLang();
+    reloadLang(lang);
 })();
