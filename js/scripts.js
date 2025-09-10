@@ -15,8 +15,11 @@ function nextPage() {
     const scamExplain = document.querySelector('.scamExplain');
     scamExplain.innerHTML = contents.shift() || contents[contents.length - 1]; //tohle smaze prvni polozku v arrayi a returnne dalsi
     if (contents.length === 0) {
-        document.querySelector('.next').innerHTML = '<i class="hgi hgi-stroke hgi-contact-01"></i> Kontakt'; // kontaktni tlacitko
-        document.querySelector('.next').setAttribute('href', 'javascript:contact()'); // tady se nastavi aby to votevrelo formular
+        const nextBtn = document.querySelector('.next');
+        nextBtn.innerHTML = '<i class="hgi hgi-stroke hgi-contact-01"></i> Kontakt'; // kontaktni tlacitko
+        nextBtn.setAttribute('href', 'javascript:contact()'); // tady se nastavi aby to votevrelo formular
+        nextBtn.setAttribute('langId', 'contactBtn');
+
         const restart = document.createElement('a');//tady je projit si to znovu
         restart.className = 'next'; //classa
         restart.style.marginLeft = '10px'; //margin
@@ -39,7 +42,7 @@ function contact() {
     scamExplain.innerHTML = 'Pokud máte jakékoli dotazy nebo potřebujete pomoc, neváhejte mne kontaktovat na <a href="mailto:mrtomicz@frdomains.eu">mrtomicz@frdomains.eu</a>, <a href="mailto:webmaster@scamstranka.cz">webmaster@scamstranka.cz</a>. Rád vám pomůžu!<br>Také můžete použít formulář níže:<br>';
     scamExplain.setAttribute('langId', 'contact')
     reloadLang(lang);
-    scamExplain.innerHTML += formular;
+    scamExplain.innerHTML = scamExplain + formular;
     const form = document.getElementById('kotaktn'); //getnuti formulare
     form.addEventListener('submit', async function(event) {//toto je kdyz das odeslat
         event.preventDefault();//vyser se na normalni odeslani a pouzij tohle

@@ -10,4 +10,5 @@ formName=Name:
 formEmail=E-Mail:
 formMsg=Message:
 formSend=Send!
+contactBtn=<i class="hgi hgi-stroke hgi-contact-01"></i> Contact
 restartBtn=<i class="hgi hgi-stroke hgi-reload"></i> Go through it again
