@@ -5,3 +5,7 @@
 
 nextPage=-&gt; Next
 scamExplain=This explanation does not work yet. We are working on it!
+formName=Name:
+formEmail=E-Mail:
+formMsg=Message:
+formSend=Send!
