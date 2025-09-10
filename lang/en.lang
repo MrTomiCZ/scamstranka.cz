@@ -4,7 +4,12 @@
 ## also as you can see comments are ##
 
 nextPage=-&gt; Next
-##scamExplain=This explanation does not work yet. We are working on it!
+scamExplain=This webpage serves to explain terms such as scam, phishing, etc. The goal is to inform users about the risks associated with these practices and how to avoid them.
+scamExplain1=Scamming is a trap, which for the goal is to trick the victim and get money out of them or sensitive information.
+scamExplain2=Phishing is a technique, in which the attacker acts like he is a trusted person or institution, in order to get sensitive information, like passwords or credit card numbers.
+scamExplain3
+scamExplain4
+scamExplain5
 contact=If you have any questions or need help, don't hesitate to contact me @ <a href="mailto:mrtomicz@frdomains.eu">mrtomicz@frdomains.eu</a>, or <a href="mailto:webmaster@scamstranka.cz">webmaster@scamstranka.cz</a>. I'd love to help you!<br>You can also use the form below:<br>
 formName=Name:
 formEmail=E-Mail:

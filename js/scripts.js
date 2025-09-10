@@ -1,5 +1,6 @@
 // POKUD SE ZDE VRTÁTE V KÓDU, POZOR MŮŽETE DOSTAT BOLEST HLAVY
 // komentare jsou tu pro vrtalky
+let count = 0;
 
 
 //tady jsou vsechny texty pro varovani pred scamem a phishing
@@ -14,6 +15,9 @@ const contents = [
 function nextPage() {
     const scamExplain = document.querySelector('.scamExplain');
     scamExplain.innerHTML = contents.shift() || contents[contents.length - 1]; //tohle smaze prvni polozku v arrayi a returnne dalsi
+    count++;
+    scamExplain.setAttribute('langId', 'scamExplain'+count)
+
     if (contents.length === 0) {
         const nextBtn = document.querySelector('.next');
         nextBtn.innerHTML = '<i class="hgi hgi-stroke hgi-contact-01"></i> Kontakt'; // kontaktni tlacitko
