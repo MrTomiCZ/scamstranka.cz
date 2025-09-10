@@ -17,6 +17,7 @@ function nextPage() {
     scamExplain.innerHTML = contents.shift() || contents[contents.length - 1]; //tohle smaze prvni polozku v arrayi a returnne dalsi
     count++;
     scamExplain.setAttribute('langId', 'scamExplain'+count)
+    reloadLang(lang);
 
     if (contents.length === 0) {
         const nextBtn = document.querySelector('.next');

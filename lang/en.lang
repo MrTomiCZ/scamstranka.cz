@@ -7,9 +7,9 @@ nextPage=-&gt; Next
 scamExplain=This webpage serves to explain terms such as scam, phishing, etc. The goal is to inform users about the risks associated with these practices and how to avoid them.
 scamExplain1=Scamming is a trap, which for the goal is to trick the victim and get money out of them or sensitive information.
 scamExplain2=Phishing is a technique, in which the attacker acts like he is a trusted person or institution, in order to get sensitive information, like passwords or credit card numbers.
-scamExplain3
-scamExplain4
-scamExplain5
+scamExplain3=How to avoid phishing? <br> - Always check the URL, from what address the e-mail or message is coming from.<br> - Never click on suspicious links or attachments.<br> - Use 2FA (MFA), if available. <br> - Never share your personal info or financial info with unknown people or at suspicious websites.
+scamExplain4=If you think you have been a victim of a scamming or phishing attack, immediately contact your bank and change your passwords.
+scamExplain5=Thank you for visiting ScamStránka.CZ. Be careful and protect your personal information!
 contact=If you have any questions or need help, don't hesitate to contact me @ <a href="mailto:mrtomicz@frdomains.eu">mrtomicz@frdomains.eu</a>, or <a href="mailto:webmaster@scamstranka.cz">webmaster@scamstranka.cz</a>. I'd love to help you!<br>You can also use the form below:<br>
 formName=Name:
 formEmail=E-Mail:
