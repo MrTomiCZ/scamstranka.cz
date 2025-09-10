@@ -33,7 +33,7 @@ function nextPage() {
 
 //tady zaciina bolest hlavy
 
-function contact() {
+async function contact() {
     const scamExplain = document.querySelector('.scamExplain'); //getnes element
     document.querySelectorAll('.next')[0].style.display = 'none'; //skryjes tlacitko
     //strasne shit zpusob elementu V
