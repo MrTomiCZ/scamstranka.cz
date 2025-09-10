@@ -24,7 +24,7 @@ function nextPage() {
         restart.setAttribute('href', 'javascript:location.reload()');//aby se to proslo zpatky
         restart.setAttribute('langId', 'restartBtn')
         document.body.appendChild(restart);//pridani do body
-        loadLang(lang);
+        reloadLang(lang);
     }
 }
 
@@ -38,7 +38,7 @@ function contact() {
     //tady se dava text kontaktu
     scamExplain.innerHTML = 'Pokud máte jakékoli dotazy nebo potřebujete pomoc, neváhejte mne kontaktovat na <a href="mailto:mrtomicz@frdomains.eu">mrtomicz@frdomains.eu</a>, <a href="mailto:webmaster@scamstranka.cz">webmaster@scamstranka.cz</a>. Rád vám pomůžu!<br>Také můžete použít formulář níže:<br>';
     scamExplain.setAttribute('langId', 'contact')
-    loadLang(lang);
+    reloadLang(lang);
     scamExplain.innerHTML += formular;
     const form = document.getElementById('kotaktn'); //getnuti formulare
     form.addEventListener('submit', async function(event) {//toto je kdyz das odeslat
