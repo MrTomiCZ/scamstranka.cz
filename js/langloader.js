@@ -1,7 +1,7 @@
 //takze tady se meni jazyky stranky
 
 //tady tohle je tu protoze nechcem nacitat cestinu, ta uz je hotova v HTML strukture
-const loadLang = true;
+let loadLang = true;
 
 //zjistime jazyk brauzeru
 const userlang = navigator.language || navigator.userLanguage;
