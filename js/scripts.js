@@ -42,7 +42,7 @@ async function contact() {
     scamExplain.innerHTML = 'Pokud máte jakékoli dotazy nebo potřebujete pomoc, neváhejte mne kontaktovat na <a href="mailto:mrtomicz@frdomains.eu">mrtomicz@frdomains.eu</a>, <a href="mailto:webmaster@scamstranka.cz">webmaster@scamstranka.cz</a>. Rád vám pomůžu!<br>Také můžete použít formulář níže:<br>';
     scamExplain.setAttribute('langId', 'contact')
     await reloadLang(lang);
-    //scamExplain.innerHTML = scamExplain.innerHTML.replace("{{FORM}}", formular);
+    scamExplain.innerHTML = scamExplain.innerHTML + formular;
     await reloadLang(lang, scamExplain);
     const form = document.getElementById('kotaktn'); //getnuti formulare
     form.addEventListener('submit', async function(event) {//toto je kdyz das odeslat
