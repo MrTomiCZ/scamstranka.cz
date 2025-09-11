@@ -18,6 +18,7 @@ if (userlang.startsWith('cs')) {//cestina🇨🇿🇨🇿🇨🇿🇨🇿🇨�
 //UPRAVENO::: tady se jen definuje funkce
 async function reloadLang(lang, element) {
     if (!loadLang) return; //tady serem na to pokud nechcem nacitat
+    document.getElementById("langSwitcher").value = lang;
     const langraw = await fetch(`/lang/${lang}.lang`)//nacti jazyk
     const langtext = await langraw.text();//precti ho
     const langlines = langtext.split('\n');//naformatovat po radkach
@@ -42,5 +43,17 @@ async function reloadLang(lang, element) {
 };
 
 (async () => {
-    reloadLang(lang);
+    const search = new URLSearchParams(window.location.search);
+    if (search.loadlang === "false") {}
+    else reloadLang(lang);
+    const switcher = document.createElement("select");
+    const en = document.createElement("option");
+    en.value = "en";
+    en.innerText = "🇺🇸 English"
+    switcher.appendChild(en);
+    const cz = document.createElement("option");
+    cz.value = "cs";
+    cz.innerText = "🇨🇿 Čeština"
+
+    switcher.id = "langSwitcher";
 })();
