@@ -56,4 +56,5 @@ async function reloadLang(lang, element) {
     cz.innerText = "🇨🇿 Čeština"
 
     switcher.id = "langSwitcher";
+    document.body.appendChild(switcher);
 })();
