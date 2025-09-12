@@ -61,9 +61,9 @@ async function reloadLang(lang, element) {
     select.value = 'en';
     select.innerText = '🌍 Language/Jazyk'
 
-    switcher.onchange((e) => {
+    switcher.onchange = (e) => {
         reloadLang(switcher.value);
-    });
+    };
 
     switcher.id = "langSwitcher";
     document.body.appendChild(switcher);
