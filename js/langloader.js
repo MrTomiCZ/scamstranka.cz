@@ -47,6 +47,7 @@ async function reloadLang(lang, element) {
     if (search.loadlang === "false") {}
     else reloadLang(lang);
     const switcher = document.createElement("select");
+    switcher.classList.add('langloader');
     const en = document.createElement("option");
     en.value = "en";
     en.innerText = "🇺🇸 English"
@@ -54,6 +55,15 @@ async function reloadLang(lang, element) {
     const cz = document.createElement("option");
     cz.value = "cs";
     cz.innerText = "🇨🇿 Čeština"
+    switcher.appendChild(cz);
+
+    const select = document.createElement("option");
+    select.value = 'en';
+    select.innerText = '🌍 Language/Jazyk'
+
+    switcher.onchange((e) => {
+        reloadLang(switcher.value);
+    });
 
     switcher.id = "langSwitcher";
     document.body.appendChild(switcher);
