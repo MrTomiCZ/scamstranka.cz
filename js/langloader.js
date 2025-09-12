@@ -63,6 +63,7 @@ async function reloadLang(lang, element) {
     switcher.prepend(select);
 
     switcher.onchange = (e) => {
+        alert('ONCHAGE!!!');
         reloadLang(switcher.value);
     };
 
