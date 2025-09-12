@@ -43,9 +43,6 @@ async function reloadLang(lang, element) {
 };
 
 (async () => {
-    const search = new URLSearchParams(window.location.search);
-    if (search.loadlang === "false") {}
-    else reloadLang(lang);
     const switcher = document.createElement("select");
     switcher.classList.add('langloader');
     const en = document.createElement("option");
@@ -57,16 +54,20 @@ async function reloadLang(lang, element) {
     cz.innerText = "🇨🇿 Čeština"
     switcher.appendChild(cz);
 
-    const select = document.createElement("option");
+    /*const select = document.createElement("option");
     select.value = 'en';
     select.innerText = '🌍 Language/Jazyk'
-    switcher.prepend(select);
+    switcher.prepend(select);*/
 
     switcher.onchange = (e) => {
-        alert('ONCHAGE!!!');
+        //alert('ONCHAGE!!!\n');
+        loadLang = true;
         reloadLang(switcher.value);
     };
 
     switcher.id = "langSwitcher";
     document.body.appendChild(switcher);
+    const search = new URLSearchParams(window.location.search);
+    if (search.loadlang === "false") {}
+    else reloadLang(lang);
 })();
