@@ -1,3 +1,6 @@
+//todo odebrat články přidat list podvodů rozklikne se pak tam je o tom scamu
+
+
 // POKUD SE ZDE VRTÁTE V KÓDU, POZOR MŮŽETE DOSTAT BOLEST HLAVY
 // komentare jsou tu pro vrtalky
 let count = 0;
