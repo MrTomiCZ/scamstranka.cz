@@ -61,7 +61,9 @@ async function reloadLang(lang, element) {
 
     switcher.onchange = (e) => {
         //alert('ONCHAGE!!!\n');
-        loadLang = true;
+        if (switcher.value === "cs") {
+            window.location.search = "?loadlang=false";
+        } else loadLang = true;
         reloadLang(switcher.value);
     };
 
