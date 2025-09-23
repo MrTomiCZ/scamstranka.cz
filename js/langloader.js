@@ -70,6 +70,6 @@ async function reloadLang(lang, element) {
     switcher.id = "langSwitcher";
     document.body.appendChild(switcher);
     const serch = new URLSearchParams(window.location.search);
-    if (serch.loadlang == "false") {}
+    if (serch.get("loadlang") == "false") {}
     else reloadLang(lang);
 })();
