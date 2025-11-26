@@ -10,7 +10,7 @@ scamExplain2=Phishing is a technique, in which the attacker acts like he is a tr
 scamExplain3=How to avoid phishing? <br> - Always check the URL, from what address the e-mail or message is coming from.<br> - Never click on suspicious links or attachments.<br> - Use 2FA (MFA), if available. <br> - Never share your personal info or financial info with unknown people or at suspicious websites.
 scamExplain4=If you think you have been a victim of a scamming or phishing attack, immediately contact your bank and change your passwords.
 scamExplain5=Thank you for visiting ScamStránka.CZ. Be careful and protect your personal information!
-contact=If you have any questions or need help, don't hesitate to contact me @ <a href="mailto:mrtomicz@frdomains.eu">mrtomicz@frdomains.eu</a>, or <a href="mailto:webmaster@scamstranka.cz">webmaster@scamstranka.cz</a>. I'd love to help you!<br>You can also use the form below:<br>
+contact=<h2>MrTomiCZ</h2><br><h3>Programmer</h3><br>If you have any questions or need help, don't hesitate to contact me @ <a href="mailto:mrtomicz@frdomains.eu">mrtomicz@frdomains.eu</a>, or <a href="mailto:webmaster@scamstranka.cz">webmaster@scamstranka.cz</a>. I'd love to help you!<br>You can also use the form below:<br>
 formName=Name:
 formEmail=E-Mail:
 formMsg=Message:

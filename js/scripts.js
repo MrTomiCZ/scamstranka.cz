@@ -21,6 +21,12 @@ function nextPage() {
     count++;
     scamExplain.setAttribute('langId', 'scamExplain'+count)
     reloadLang(lang);
+    if (count === 1) {
+        const nextBtn = document.querySelector('.next');
+        nextBtn.innerHTML = '<i class="hgi hgi-stroke hgi-contact-01"></i> Kontakt'; // kontaktni tlacitko
+        nextBtn.setAttribute('href', 'javascript:contact()'); // tady se nastavi aby to votevrelo formular
+        nextBtn.setAttribute('langId', 'contactBtn');
+    }
 
     if (contents.length === 0) {
         const nextBtn = document.querySelector('.next');
@@ -47,7 +53,7 @@ async function contact() {
     //strasne shit zpusob elementu V
     const formular = '<form action id="kotaktn"><label for="name" langId="formName">Jméno:</label><br><input type="text" id="name" name="name" required><br><label for="email" langId="formEmail">E-mail:</label><br><input type="email" id="email" name="email" required><br><label for="message" langId="formMsg">Zpráva:</label><br><textarea id="message" name="message" rows="4" required></textarea><br><input type="submit" value="Odeslat" class="next" langId="formSend"></form>';
     //tady se dava text kontaktu
-    scamExplain.innerHTML = 'Pokud máte jakékoli dotazy nebo potřebujete pomoc, neváhejte mne kontaktovat na <a href="mailto:mrtomicz@frdomains.eu">mrtomicz@frdomains.eu</a>, <a href="mailto:webmaster@scamstranka.cz">webmaster@scamstranka.cz</a>. Rád vám pomůžu!<br>Také můžete použít formulář níže:<br>';
+    scamExplain.innerHTML = '<h2>MrTomiCZ</h2><br><h3>Programátor</h3><br>Pokud máte jakékoli dotazy nebo potřebujete pomoc, neváhejte mne kontaktovat na <a href="mailto:mrtomicz@frdomains.eu">mrtomicz@frdomains.eu</a>, <a href="mailto:webmaster@scamstranka.cz">webmaster@scamstranka.cz</a>. Rád vám pomůžu!<br>Také můžete použít formulář níže:<br>';
     scamExplain.setAttribute('langId', 'contact')
     await reloadLang(lang);
     scamExplain.innerHTML = scamExplain.innerHTML + formular;
@@ -66,7 +72,9 @@ async function contact() {
                 name: form.name.value,//jmeno
                 email: form.email.value,//ymejl
                 message: form.message.value,//zprava
-                ip: userIP
+                ip: userIP//ip protoze jsem skid pouzivam kali linuks muheheheheheheheh
+                //ne delam si srandu ale aspon mam prehled kdo me sere pokud je to ten samy clovek
+                //todo pridat nejakou ochranu proti spamu (captcha nebo tak neco) a mozna useragent
             }),
             headers: { "Content-Type": "application/json" }//jinak na nas server sere a hazi error
         }).then(response => {
