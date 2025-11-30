@@ -11,6 +11,8 @@ nextBtn.className = 'next'; //tady nastavime classu
 nextBtn.innerHTML = '<i class="hgi hgi-stroke hgi-contact-01"></i> Kontakt'; // kontaktni tlacitko
 nextBtn.setAttribute('href', 'javascript:contact()'); // tady se nastavi aby to votevrelo formular
 nextBtn.setAttribute('langId', 'contactBtn');
+const br = document.createElement('br');
+document.querySelector(".scamExplain").appendChild(br); //brrrr
 document.querySelector(".scamExplain").appendChild(nextBtn); //pridani do body
 
 //tady jsou vsechny texty pro varovani pred scamem a phishing
