@@ -21,7 +21,7 @@ function nextPage() {
     count++;
     scamExplain.setAttribute('langId', 'scamExplain'+count)
     reloadLang(lang);
-    if (count === 0) {
+    if (count === 1) {
         const nextBtn = document.createElement('a'); //tady vytvorime tlacitko
         nextBtn.className = 'next'; //tady nastavime classu
         nextBtn.innerHTML = '<i class="hgi hgi-stroke hgi-contact-01"></i> Kontakt'; // kontaktni tlacitko
